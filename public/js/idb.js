@@ -1,3 +1,5 @@
+/* js file for saving offline entries to indexedDB */
+
 // create variable to hold db connection
 let db;
 // establish a connection to IndexedDB database called 'cash_db' and set it to version 1
@@ -37,7 +39,7 @@ const saveRecord = function (record) {
 
 	// add record to your store with add method
 	transactionObjectStore.add(record);
-}
+};
 
 function uploadTransaction() {
 	// open a transaction on your db
@@ -80,8 +82,6 @@ function uploadTransaction() {
 				});
 		}
 	};
-
-
 }
 
 // listen for app coming back online
